@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        max-width: 100vw;
+        height: 100vh;
+    }
+
+    .logo {
+        width: 300px;
+        overflow: hidden;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        background: #ffffffad;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        padding: 10px;
+    }
+
+    .logo p {
+        text-align: center;
+        font-family: "Almarai", Arial;
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #242550;
+        transform: translateY(-25px);
+    }
+
+    .logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .videos-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .videoo {
+        min-width: 340px;
+        width: 50%;
+        height: 50%;
+        overflow: hidden;
+        flex-grow: 1;
+        cursor: pointer;
+        filter: brightness(0.5);
+    }
+
+    .videoo video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+    .first-video video {
+        border: 5px solid #f5d62f;
+    }
+
+    .second-video video {
+        border: 5px solid #195b9b;
+    }
+
+    .third-video video {
+        border: 5px solid #aea3a3;
+    }
+
+    .fourth-video video {
+        border: 5px solid #dbb887;
+    }
+</style>
+
+<body>
+
+    <div class="logo">
+        <img src="./Files/sscc-new-logo.png" alt="sscc-logo">
+        <p style="font-size: 20px;">شركة الأنظمة العلمية للمقاولات</p>
+        <p>Scientific Systems Construction Company</p>
+    </div>
+    <div class="videos-wrapper">
+        <div class="videoo first-video">
+            <video src="./Files/SSCC-CONST.mp4" muted="" loop="" playsinline=""></video>
+        </div>
+
+        <div class="videoo second-video">
+            <video src="./Files/SSCC-DESIGN.mp4" muted="" loop="" playsinline=""></video>
+        </div>
+
+        <div class="videoo third-video">
+            <video src="./Files/SSCC-DESIGN.mp4" muted="" loop="" playsinline=""></video>
+        </div>
+
+        <div class="videoo fourth-video">
+            <video src="./Files/SSCC-CONST.mp4" muted="" loop="" playsinline=""></video>
+        </div>
+    </div>
+
+
+    <script>
+        let VideosWrapper = document.querySelectorAll('.videoo');
+
+        VideosWrapper.forEach((el) => {
+            el.addEventListener("mouseenter", () => {
+                el.style.filter = "brightness(0.9)";
+                el.querySelector("video").play();
+            });
+
+            el.addEventListener("mouseleave", () => {
+                el.style.filter = "brightness(0.5)";
+                el.querySelector("video").pause();
+            });
+        });
+    </script>
+</body>
+
+</html>

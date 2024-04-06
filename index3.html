@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        max-width: 100vw;
+        height: 100vh;
+    }
+
+    .videos-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+    }
+
+    .videoo {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        cursor: pointer;
+        filter: brightness(0.5);
+        z-index: 3;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .videoo video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .active-video {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+    }
+
+    .inactive-video {
+        clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%) !important;
+    }
+
+    .first-video {
+        clip-path: polygon(0 0, 25% 0, 25% 100%, 0 100%);
+    }
+
+    .second-video {
+        clip-path: polygon(25% 0, 50% 0, 50% 100%, 25% 100%);
+    }
+
+    .third-video {
+        clip-path: polygon(50% 0, 75% 0, 75% 100%, 50% 100%);
+    }
+
+    .fourth-video {
+        clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);
+    }
+</style>
+
+<body>
+    <div class="videos-wrapper">
+        <div class="videoo first-video">
+            <video src="./Files/SSCC-CONST.mp4" muted="" loop="" playsinline=""></video>
+        </div>
+
+        <div class="videoo second-video">
+            <video src="./Files/SSCC-DESIGN.mp4" muted="" loop="" playsinline=""></video>
+        </div>
+
+        <div class="videoo third-video">
+            <video src="./Files/SSCC-CONST.mp4" muted="" loop="" playsinline=""></video>
+        </div>
+
+        <div class="videoo fourth-video">
+            <video src="./Files/SSCC-DESIGN.mp4" muted="" loop="" playsinline=""></video>
+
+        </div>
+    </div>
+
+    <script>
+        let VideosWrapper = document.querySelectorAll('.videoo');
+
+        VideosWrapper.forEach((el) => {
+            el.addEventListener("mouseenter", () => {
+                el.style.filter = "brightness(0.9)";
+                el.querySelector("video").play();
+                // VideosWrapper.forEach((vid) => {
+                //     vid.classList.add("inactive-video");
+                // });
+                // el.classList.remove("inactive-video");
+                // el.classList.add("active-video");
+
+            });
+
+            el.addEventListener("mouseleave", () => {
+                el.style.filter = "brightness(0.5)";
+                el.querySelector("video").pause();
+            });
+        });
+    </script>
+</body>
+
+</html>

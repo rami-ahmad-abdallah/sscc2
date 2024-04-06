@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        max-width: 100vw;
+        height: 100vh;
+    }
+
+    /************** LOGO *****************/
+    /********************************************************************/
+    .logo {
+        width: 280px;
+        height: 300px;
+        overflow: hidden;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        background: #ffffffad;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        padding: 10px;
+    }
+
+    .logo p {
+        text-align: center;
+        font-family: "Almarai", Arial;
+        margin: 0;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        font-weight: 600;
+        font-size: 14px;
+        color: #242550;
+        transform: translateY(-25px);
+    }
+
+    .logo img {
+        width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /********************************************************************/
+    /********************************************************************/
+    .videos-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+    }
+
+    .videoo {
+        width: 100vw;
+        height: 100vh;
+        transition: all 0.3s ease-in-out;
+        position: fixed;
+        top: 0;
+        left: 0;
+        filter: brightness(0.5);
+    }
+
+    .videoo video {
+        object-fit: cover;
+        z-index: 9;
+    }
+
+    /*******  FIRST VIDEO  *************/
+    /**********************************************************************************************/
+    .first-video {
+        clip-path: polygon(0px 0px, 100% 0px, 50% 50%, 50% 50%);
+    }
+
+    .first-video video {
+        width: 100%;
+        height: 50%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .first-video-active {
+        z-index: 10;
+        clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%);
+    }
+
+    .first-video-active video {
+        height: 100%;
+    }
+
+    /***********************************************************************************************/
+
+
+    /*******  SECOND VIDEO  *************/
+    /***********************************************************************************************/
+    .second-video {
+        clip-path: polygon(0 0, 50% 50%, 50% 50%, 0% 100%);
+    }
+
+    .second-video video {
+        width: 50%;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .second-video-active {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        z-index: 10;
+    }
+
+    .second-video-active video {
+        width: 100%;
+        height: 100%;
+    }
+
+    /***********************************************************************************************/
+
+    /*******  THIRD VIDEO  *************/
+    /***********************************************************************************************/
+    .third-video {
+        clip-path: polygon(0% 100%, 50% 50%, 50% 50%, 100% 100%);
+        bottom: 0;
+    }
+
+    .third-video video {
+        width: 100%;
+        height: 50%;
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .third-video-active {
+        clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
+        z-index: 10;
+    }
+
+    .third-video-active video {
+        width: 100%;
+        height: 100%;
+    }
+
+    /***********************************************************************************************/
+
+
+    /*******  THIRD VIDEO  *************/
+    /***********************************************************************************************/
+    .fourth-video {
+        clip-path: polygon(100% 0, 50% 50%, 50% 50%, 100% 100%);
+    }
+
+    .fourth-video video {
+        width: 50%;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        right: 0;
+    }
+
+    .fourth-video-active {
+        clip-path: polygon(100% 0, 0% 0%, 0% 100%, 100% 100%);
+        z-index: 10;
+    }
+
+    .fourth-video-active video {
+        width: 100%;
+        height: 100%;
+    }
+
+    /***********************************************************************************************/
+</style>
+
+<body>
+    <div class="logo">
+        <img src="./Files/sscc-new-logo.png" alt="sscc-logo">
+        <p style="font-size: 19px;">شركة الأنظمة العلمية للمقاولات</p>
+        <p>Scientific Systems Construction Company</p>
+        <p>قسم أعمال البنية التحتية</p>
+        <p>Infrastructure Works Department</p>
+    </div>
+    <div class="videos-wrapper">
+        <div class="videoo first-video  ">
+            <video src="./Files/SSCC-CONST.mp4" muted="" loop="" playsinline=""></video>
+        </div>
+
+        <div class="videoo second-video">
+            <video src="./Files/SSCC-DESIGN.mp4" muted="" loop="" playsinline=""></video>
+        </div>
+
+        <div class="videoo third-video">
+            <video src="./Files/SSCC-CONST.mp4" muted="" loop="" playsinline=""></video>
+        </div>
+
+        <div class="videoo fourth-video">
+            <video src="./Files/SSCC-DESIGN.mp4" muted="" loop="" playsinline=""></video>
+        </div>
+    </div>
+
+    <script>
+        let VideosWrapper = document.querySelectorAll('.videoo');
+
+        VideosWrapper.forEach((el) => {
+            el.addEventListener("mouseenter", () => {
+                el.style.filter = "brightness(0.9)";
+                el.querySelector("video").play();
+                if (el.classList.contains("first-video")) {
+                    el.classList.add("first-video-active");
+                } else if (el.classList.contains("second-video")) {
+                    el.classList.add("second-video-active");
+                } else if (el.classList.contains("third-video")) {
+                    el.classList.add("third-video-active");
+                } else if (el.classList.contains("fourth-video")) {
+                    el.classList.add("fourth-video-active");
+                }
+                // VideosWrapper.forEach((vid) => {
+                //     vid.classList.add("inactive-video");
+                // });
+                // el.classList.remove("inactive-video");
+                // el.classList.add("active-video");
+
+            });
+
+            el.addEventListener("mouseleave", () => {
+                el.style.filter = "brightness(0.5)";
+                el.querySelector("video").pause();
+
+                if (el.classList.contains("first-video")) {
+                    el.classList.remove("first-video-active");
+                } else if (el.classList.contains("second-video")) {
+                    el.classList.remove("second-video-active");
+                } else if (el.classList.contains("third-video")) {
+                    el.classList.remove("third-video-active");
+                } else if (el.classList.contains("fourth-video")) {
+                    el.classList.remove("fourth-video-active");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
