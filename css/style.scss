@@ -9,9 +9,9 @@
      width: 100vw;
      height: 100vh;
      overflow: hidden;
-     background-image: linear-gradient(rgb(247 214 26 / 70%), rgb(66 140 195 / 70%), rgb(174 168 171 / 70%), rgb(213 183 143 / 70%));
-     background-size: 150px;
+     background-image: linear-gradient(rgba(247, 214, 26, 0.7), rgba(66, 140, 195, 0.7), rgba(174, 168, 171, 0.7), rgba(213, 183, 143, 0.7));
      background-attachment: fixed;
+     background-repeat: no-repeat;
  }
 
  .videoo {
