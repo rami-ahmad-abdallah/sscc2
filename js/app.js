@@ -26,8 +26,7 @@ VideosWrapper.forEach((el) => {
     } else if (el.classList.contains("fourth-video")) {
       document.getElementById("bv4").classList.add("active-bv");
       document.getElementById("bv4").play();
-      document.getElementById("bvbg").style.background =
-        "rgb(213 183 143 / 70%)";
+      document.getElementById("bvbg").style.background = "rgb(255 146 0 / 70%)";
       document.getElementById("fovt").classList.add("active-video-title");
     }
   });

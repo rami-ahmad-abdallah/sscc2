@@ -9,7 +9,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-image: linear-gradient(rgba(247, 214, 26, 0.7), rgba(66, 140, 195, 0.7), rgba(174, 168, 171, 0.7), rgba(213, 183, 143, 0.7));
+  background-image: linear-gradient(rgba(247, 214, 26, 0.7), rgba(66, 140, 195, 0.7), rgba(174, 168, 171, 0.7), rgba(189, 127, 45, 0.7));
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
