@@ -79,12 +79,13 @@ section .title {
   text-transform: uppercase;
   font-size: 22px;
 }
-section .title h1 {
+section .title h3 {
   border-bottom: 4px solid;
 }
 section .text {
   width: 340px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   height: 400px;
   font-size: 14px;
   background: rgba(0, 0, 0, 0.65);
@@ -95,6 +96,18 @@ section .text {
   height: auto;
   max-height: 425px;
 }
+section .text::-webkit-scrollbar {
+  width: 3px;
+  background-color: rgba(15, 124, 213, 0);
+}
+section .text::-webkit-scrollbar-thumb {
+  background-color: aliceblue;
+  border-radius: 10px;
+  cursor: pointer;
+}
+section .text::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(205, 220, 233);
+}
 section:nth-child(odd) {
   background-image: linear-gradient(130deg, #151935, #0f7bd5);
 }
@@ -102,6 +115,12 @@ section:nth-child(even) {
   background-image: linear-gradient(50deg, #151935, #0f7bd5);
 }
 
+/* MOBILE STYLES */
+@media only screen and (max-width: 760px) {
+  section:nth-child(odd) {
+    flex-flow: column-reverse;
+  }
+}
 #distinguishes {
   display: block;
   height: auto;
@@ -127,7 +146,7 @@ section:nth-child(even) {
 }
 #distinguishes .tiles .single-tile .tile-content {
   width: 250px;
-  height: 70%;
+  height: 75%;
   background: rgba(0, 0, 0, 0.4901960784);
   padding: 10px;
   border-radius: 30px 0px;
