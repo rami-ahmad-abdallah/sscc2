@@ -123,11 +123,11 @@ section {
   }
 
   &:nth-child(odd) {
-    background-image: linear-gradient(130deg, #151935, #0f7bd5);
+    background-image: linear-gradient(90deg, #151935, #0f7bd5);
   }
 
   &:nth-child(even) {
-    background-image: linear-gradient(50deg, #151935, #0f7bd5);
+    background-image: linear-gradient(270deg, #151935, #0f7bd5);
   }
 }
 
@@ -140,7 +140,7 @@ section {
   }
 }
 
-#info {
+.flex-section {
   .container {
     width: clamp(320px, 50%, 440px);
     height: 325px;
@@ -188,46 +188,28 @@ section {
 }
 
 #distinguishes {
-  display: block;
-  height: auto;
-  padding: 20px;
+  flex-flow: row wrap !important;
 
-  .tiles {
-    width: 100%;
-    height: auto;
+  h2 {
+    text-align: center;
+    margin: 35px 0px;
+  }
+
+  .points {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+    flex-flow: row wrap !important;
+    gap: 10px;
 
-    .single-tile {
-      width: 340px;
-      height: 400px;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
+    .container {
+      width: 240px;
 
-      .tile-content {
-        width: 250px;
-        height: 75%;
-        background: #0000007d;
-        padding: 10px;
-        border-radius: 30px 0px;
-
-        .tile-header {
-          width: 100%;
-          background: #00000075;
-          padding: 10px;
-          border-radius: 22px 0px;
-          margin-bottom: 10px;
-
-          img {
-            width: 100px;
-          }
-        }
+      .container-head {
+        flex-direction: column;
+        text-align: center;
+        height: 100px;
+        font-size: 14px;
       }
     }
   }
