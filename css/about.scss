@@ -83,13 +83,8 @@ section {
 
   .title {
     text-align: center;
-    margin: 0px 50px;
     text-transform: uppercase;
-    font-size: 22px;
-
-    h3 {
-      border-bottom: 4px solid;
-    }
+    font-size: clamp(13px, 2vw, 22px);
   }
 
   .text {
@@ -141,6 +136,7 @@ section {
 }
 
 .flex-section {
+  padding: 100px 0px;
   .container {
     width: clamp(320px, 50%, 440px);
     height: 325px;
@@ -193,6 +189,7 @@ section {
   h2 {
     text-align: center;
     margin: 35px 0px;
+    width: clamp(365px, 50%, 500px);
   }
 
   .points {
@@ -265,40 +262,62 @@ section {
 }
 
 #certificates {
-  .commercial {
-    background: #0000008a;
-    padding: 15px;
-    border-radius: 30px;
-    margin: 10px 0px 35px 0px;
+  display: block;
 
-    h5 {
+  .commercial {
+    background: rgba(0, 0, 0, 0.5411764706);
+    padding: 15px;
+    border-radius: 10px 75px;
+    margin: 10px 0px 35px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+
+    h4 {
       text-align: center;
+      margin: 10px 0px 20px 0px;
     }
   }
   .papers {
     display: flex;
-    flex-flow: row wrap;
     gap: 10px;
+    flex-direction: column;
     justify-content: center;
+    width: 100%;
+
     img {
-      width: 340px;
-      height: 240px;
+      width: 100%;
+      height: 100%;
       border-radius: 10px;
     }
   }
 
   .class {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     background: #0000008a;
     padding: 15px;
     border-radius: 30px;
     margin: 10px 0px 35px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px auto;
+
+    h4 {
+      text-align: center;
+      margin: 10px 0px 20px 0px;
+    }
 
     img {
-      width: 80%;
+      width: 100%;
+      height: 100%;
       border-radius: 10px;
     }
   }
@@ -307,13 +326,16 @@ section {
 #footer {
   background: black !important;
   flex-flow: row wrap;
+
   .footer-div {
-    width: 300px;
-    height: 350px;
+    width: 325px;
+    height: 450px;
     overflow: hidden;
     text-align: center;
     border: 1px solid;
     border-radius: 10px;
+    border-radius: 10px 75px;
+
     img {
       width: 200px;
     }
@@ -325,10 +347,47 @@ section {
 
   .map {
     width: -webkit-fill-available;
+    height: 450px;
 
     iframe {
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+#message-form {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 15px;
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 0px 20px;
+      border: 0;
+      outline: 0;
+      background: #f9f9f9;
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+
+  .submit-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px 20px;
+    font-size: 16px;
+    cursor: pointer;
   }
 }

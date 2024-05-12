@@ -76,12 +76,8 @@ section {
 }
 section .title {
   text-align: center;
-  margin: 0px 50px;
   text-transform: uppercase;
-  font-size: 22px;
-}
-section .title h3 {
-  border-bottom: 4px solid;
+  font-size: clamp(13px, 2vw, 22px);
 }
 section .text {
   width: 340px;
@@ -121,6 +117,9 @@ section:nth-child(even) {
   section:nth-child(odd) {
     flex-flow: column-reverse;
   }
+}
+.flex-section {
+  padding: 100px 0px;
 }
 .flex-section .container {
   width: clamp(320px, 50%, 440px);
@@ -167,6 +166,7 @@ section:nth-child(even) {
 #distinguishes h2 {
   text-align: center;
   margin: 35px 0px;
+  width: clamp(365px, 50%, 500px);
 }
 #distinguishes .points {
   display: flex;
@@ -227,38 +227,59 @@ section:nth-child(even) {
   position: relative;
 }
 
+#certificates {
+  display: block;
+}
 #certificates .commercial {
   background: rgba(0, 0, 0, 0.5411764706);
   padding: 15px;
-  border-radius: 30px;
+  border-radius: 10px 75px;
   margin: 10px 0px 35px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
 }
-#certificates .commercial h5 {
+#certificates .commercial h4 {
   text-align: center;
+  margin: 10px 0px 20px 0px;
 }
 #certificates .papers {
   display: flex;
-  flex-flow: row wrap;
   gap: 10px;
+  flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 #certificates .papers img {
-  width: 340px;
-  height: 240px;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 #certificates .class {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   background: rgba(0, 0, 0, 0.5411764706);
   padding: 15px;
   border-radius: 30px;
   margin: 10px 0px 35px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 10px auto;
+}
+#certificates .class h4 {
+  text-align: center;
+  margin: 10px 0px 20px 0px;
 }
 #certificates .class img {
-  width: 80%;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -267,12 +288,13 @@ section:nth-child(even) {
   flex-flow: row wrap;
 }
 #footer .footer-div {
-  width: 300px;
-  height: 350px;
+  width: 325px;
+  height: 450px;
   overflow: hidden;
   text-align: center;
   border: 1px solid;
   border-radius: 10px;
+  border-radius: 10px 75px;
 }
 #footer .footer-div img {
   width: 200px;
@@ -282,8 +304,41 @@ section:nth-child(even) {
 }
 #footer .map {
   width: -webkit-fill-available;
+  height: 450px;
 }
 #footer .map iframe {
   width: 100%;
   height: 100%;
+}
+
+#message-form {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#message-form .form-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 15px;
+}
+#message-form .form-field input,
+#message-form .form-field textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0px 20px;
+  border: 0;
+  outline: 0;
+  background: #f9f9f9;
+}
+#message-form .form-field textarea {
+  resize: none;
+}
+#message-form .submit-btn {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }/*# sourceMappingURL=about.css.map */
