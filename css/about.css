@@ -284,20 +284,59 @@ section:nth-child(even) {
 }
 
 #footer {
-  background: black !important;
+  background: #3f3f3f !important;
   flex-flow: row wrap;
+  text-shadow: 0px 5px 5px black;
 }
 #footer .footer-div {
   width: 325px;
   height: 450px;
   overflow: hidden;
   text-align: center;
-  border: 1px solid;
   border-radius: 10px;
   border-radius: 10px 75px;
 }
 #footer .footer-div img {
   width: 200px;
+}
+#footer .footer-div .contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 10px;
+  gap: 10px;
+  text-align: start;
+}
+#footer .footer-div .contact img {
+  width: 50px;
+}
+#footer .footer-div .contact a {
+  color: white;
+  text-decoration: none;
+}
+#footer .footer-div .contact a:hover {
+  color: var(--gold);
+}
+#footer .footer-div .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+#footer .footer-div .social a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+#footer .footer-div .social a:hover {
+  color: var(--gold);
+}
+#footer .final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
 }
 #footer .grow {
   flex-grow: 1;
@@ -305,6 +344,7 @@ section:nth-child(even) {
 #footer .map {
   width: -webkit-fill-available;
   height: 450px;
+  margin: 50px 0px;
 }
 #footer .map iframe {
   width: 100%;
@@ -341,4 +381,7 @@ section:nth-child(even) {
   border-radius: 5px 20px;
   font-size: 16px;
   cursor: pointer;
+}
+#message-form .submit-btn:hover {
+  background-color: var(--gold);
 }/*# sourceMappingURL=about.css.map */
