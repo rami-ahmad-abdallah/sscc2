@@ -324,21 +324,68 @@ section {
 }
 
 #footer {
-  background: black !important;
+  background: #3f3f3f !important;
   flex-flow: row wrap;
+  text-shadow: 0px 5px 5px black;
 
   .footer-div {
     width: 325px;
     height: 450px;
     overflow: hidden;
     text-align: center;
-    border: 1px solid;
     border-radius: 10px;
     border-radius: 10px 75px;
 
     img {
       width: 200px;
     }
+
+    .contact {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 15px 10px;
+      gap: 10px;
+      text-align: start;
+
+      img {
+        width: 50px;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: var(--gold);
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+
+        &:hover {
+          color: var(--gold);
+        }
+      }
+    }
+  }
+
+  .final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
   }
 
   .grow {
@@ -348,6 +395,7 @@ section {
   .map {
     width: -webkit-fill-available;
     height: 450px;
+    margin: 50px 0px;
 
     iframe {
       width: 100%;
@@ -389,5 +437,9 @@ section {
     border-radius: 5px 20px;
     font-size: 16px;
     cursor: pointer;
+
+    &:hover {
+      background-color: var(--gold);
+    }
   }
 }
