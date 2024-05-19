@@ -57,4 +57,17 @@ VideosWrapper.forEach((el) => {
       document.getElementById("fovt").classList.remove("active-video-title");
     }
   });
+
+  el.addEventListener("click", () => {
+    if (el.classList.contains("first-video")) {
+      window.location = "./infrastructure.html";
+      console.log("INFRASTRUCTURE");
+    } else if (el.classList.contains("second-video")) {
+      console.log("MANAGEMENT");
+    } else if (el.classList.contains("third-video")) {
+      console.log("SUPPLY");
+    } else if (el.classList.contains("fourth-video")) {
+      console.log("INTERIOR");
+    }
+  });
 });
