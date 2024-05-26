@@ -38,3 +38,15 @@ window.addEventListener("scroll", () => {
     }
   }
 });
+
+// FADE UP WITH TRANSITION DELAY FOR ELEMENTS THAT BELONG TO THE SAME FATHER
+let fade_up_parents = document.querySelectorAll(".fade-up-parent");
+
+fade_up_parents.forEach((parent) => {
+  let children = parent.querySelectorAll(".fade-up");
+
+  children.forEach((child, i) => {
+    let delay = `0.${i}s`;
+    child.style.transitionDelay = delay;
+  });
+});
