@@ -5,7 +5,7 @@ let delayTime = 0;
 let fade_up_elements = document.querySelectorAll(".fade-up");
 
 fade_up_elements.forEach((element) => {
-  element.setAttribute("style", "transition:all 0.7s ease");
+  element.setAttribute("style", "transition:all 0.5s ease");
 });
 
 if (fade_up_elements.length > 0) {
@@ -45,8 +45,16 @@ let fade_up_parents = document.querySelectorAll(".fade-up-parent");
 fade_up_parents.forEach((parent) => {
   let children = parent.querySelectorAll(".fade-up");
 
+  let delay = 0;
   children.forEach((child, i) => {
-    let delay = `0.${i}s`;
-    child.style.transitionDelay = delay;
+    // if (i > 9) {
+    //   delay = `${i / 10}s`;
+    // } else {
+    //   delay = `0.${i}s`;
+    // }
+
+    delay = delay + 0.03;
+
+    child.style.transitionDelay = delay + "s";
   });
 });
