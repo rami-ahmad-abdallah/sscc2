@@ -187,9 +187,14 @@ body {
           width: 360px;
           overflow: hidden;
           height: 450px;
+          scroll-snap-type: x mandatory;
 
           &::-webkit-scrollbar {
             width: 0px;
+          }
+
+          .c-image {
+            scroll-snap-align: center;
           }
 
           img {

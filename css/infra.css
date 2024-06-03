@@ -174,9 +174,13 @@ body section .carosals-container .carosal .carosal-images {
   width: 360px;
   overflow: hidden;
   height: 450px;
+  scroll-snap-type: x mandatory;
 }
 body section .carosals-container .carosal .carosal-images::-webkit-scrollbar {
   width: 0px;
+}
+body section .carosals-container .carosal .carosal-images .c-image {
+  scroll-snap-align: center;
 }
 body section .carosals-container .carosal .carosal-images img {
   width: 360px;

@@ -17,3 +17,7 @@ window.addEventListener("scroll", (e) => {
     department.style.transform = `scale(${shrink})`;
   }
 });
+
+if (window.scrollY > 500) {
+  department.style.transform = `scale(0.5)`;
+}
