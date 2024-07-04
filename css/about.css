@@ -287,6 +287,7 @@ section:nth-child(even) {
   background: #3f3f3f !important;
   flex-flow: row wrap;
   text-shadow: 0px 5px 5px black;
+  justify-content: space-around;
 }
 #footer .footer-div {
   width: 325px;

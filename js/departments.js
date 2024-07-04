@@ -21,3 +21,13 @@ window.addEventListener("scroll", (e) => {
 if (window.scrollY > 500) {
   department.style.transform = `scale(0.5)`;
 }
+
+let closeListBtn = document.querySelector(".close-list");
+
+closeListBtn.addEventListener("click", () => {
+  if (closeListBtn.parentElement.classList.contains("active-list")) {
+    closeListBtn.parentElement.classList.remove("active-list");
+  } else {
+    closeListBtn.parentElement.classList.add("active-list");
+  }
+});
