@@ -61,13 +61,10 @@ VideosWrapper.forEach((el) => {
   el.addEventListener("click", () => {
     if (el.classList.contains("first-video")) {
       window.location = "./infrastructure.html";
-      console.log("INFRASTRUCTURE");
     } else if (el.classList.contains("second-video")) {
-      console.log("MANAGEMENT");
+      window.location = "./management.html";
     } else if (el.classList.contains("third-video")) {
-      console.log("SUPPLY");
     } else if (el.classList.contains("fourth-video")) {
-      console.log("INTERIOR");
     }
   });
 });

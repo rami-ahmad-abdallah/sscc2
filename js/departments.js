@@ -22,6 +22,21 @@ if (window.scrollY > 500) {
   department.style.transform = `scale(0.5)`;
 }
 
+// SHOWING THE LIST BUTTON IS TOGGLE BUTTON
+let toggleBtn = document.querySelector(".toggle-btn");
+
+toggleBtn.addEventListener("mouseover", () => {
+  console.log("hey");
+  toggleBtn.classList.add("hover-over-toggle");
+});
+
+// ADDING CLICK EVENT ON THE LIST TOGGLER
+toggleBtn.addEventListener("click", () => {
+  if (!closeListBtn.parentElement.classList.contains("active-list")) {
+    closeListBtn.parentElement.classList.add("active-list");
+  }
+});
+
 let closeListBtn = document.querySelector(".close-list");
 
 closeListBtn.addEventListener("click", () => {
