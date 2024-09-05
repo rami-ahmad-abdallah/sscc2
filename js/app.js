@@ -64,6 +64,7 @@ VideosWrapper.forEach((el) => {
     } else if (el.classList.contains("second-video")) {
       window.location = "./management.html";
     } else if (el.classList.contains("third-video")) {
+      window.location = "./supplies.html";
     } else if (el.classList.contains("fourth-video")) {
     }
   });
